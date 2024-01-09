@@ -1,21 +1,15 @@
 package main
 
 import (
-	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"github.com/santtuniskanen/golang-restapi/database"
+	"github.com/santtuniskanen/golang-restapi/router"
 )
 
 func init() {
-	initializers.loadenv()
+	database.LoadEnvironment()
+	database.ConnectToDB()
 }
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	router.Routes()
 }
