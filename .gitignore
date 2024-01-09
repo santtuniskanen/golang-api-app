@@ -21,3 +21,6 @@
 go.work
 
 pkg/common/envs
+
+# Environment Variables
+.env
