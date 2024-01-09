@@ -8,7 +8,7 @@ import (
 	"github.com/santtuniskanen/golang-restapi/models"
 )
 
-func PostsCreate(c *gin.Context) {
+func CreatePost(c *gin.Context) {
 
 	var body struct {
 		Body  string
@@ -31,7 +31,7 @@ func PostsCreate(c *gin.Context) {
 	})
 }
 
-func PostsGetAll(c *gin.Context) {
+func GetPosts(c *gin.Context) {
 	var posts []models.Post
 	database.DB.Find(&posts)
 
@@ -40,7 +40,7 @@ func PostsGetAll(c *gin.Context) {
 	})
 }
 
-func PostsGetOne(c *gin.Context) {
+func GetPostByID(c *gin.Context) {
 	id := c.Param("id")
 
 	var post models.Post
@@ -51,7 +51,7 @@ func PostsGetOne(c *gin.Context) {
 	})
 }
 
-func PostsUpdate(c *gin.Context) {
+func UpdatePost(c *gin.Context) {
 	id := c.Param("id")
 
 	var body struct {
@@ -74,7 +74,7 @@ func PostsUpdate(c *gin.Context) {
 	})
 }
 
-func PostsDelete(c *gin.Context) {
+func DeletePost(c *gin.Context) {
 	id := c.Param("id")
 
 	var post models.Post

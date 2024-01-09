@@ -8,11 +8,11 @@ import (
 func Routes() {
 	r := gin.Default()
 
-	r.DELETE("/posts/:id", controllers.PostsDelete)
-	r.POST("/posts", controllers.PostsCreate)
-	r.PUT("/posts/:id", controllers.PostsUpdate)
-	r.GET("/posts", controllers.PostsGetAll)
-	r.GET("/posts/:id", controllers.PostsGetOne)
+	r.DELETE("/posts/:id", controllers.DeletePost)
+	r.POST("/posts", controllers.CreatePost)
+	r.PUT("/posts/:id", controllers.UpdatePost)
+	r.GET("/posts", controllers.GetPosts)
+	r.GET("/posts/:id", controllers.GetPostByID)
 
 	r.Run()
 }
