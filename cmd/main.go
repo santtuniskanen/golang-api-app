@@ -11,5 +11,5 @@ func init() {
 }
 
 func main() {
-	router.Routes()
+	router.Run()
 }
