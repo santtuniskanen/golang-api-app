@@ -3,7 +3,7 @@
 A simple JSON API written in Go. I might expand this *a lot* in the future depending how much I feel like learning Go and Backend Development together.
 
 ## CI/CD Status
-[![CircleCI](https://circleci.com/gh/santtuniskanen/golang-grove.svg?style=shield)](https://app.circleci.com/pipelines/github/santtuniskanen/golang-grove)
+[![Go Build](https://circleci.com/gh/santtuniskanen/golang-grove.svg?style=shield)](https://app.circleci.com/pipelines/github/santtuniskanen/golang-grove)
 
 ## Gin & Gorm
 The backend is powered by Gin Web Framework and GORM, Object-Relational Mapping library for Go.
