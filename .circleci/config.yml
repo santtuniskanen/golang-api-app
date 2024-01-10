@@ -4,4 +4,8 @@ jobs:
       - image: cimg/go:1.21.5
     steps:
       - checkout
-      - run: go build ../cmd/main.go
+      - run: 
+          name: Build Go Application
+          command: |
+            cd cmd
+            go build -o ../output ./main.go
