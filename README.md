@@ -3,7 +3,7 @@
 A simple JSON API written in Go. I might expand this *a lot* in the future depending how much I feel like learning Go and Backend Development together.
 
 ## CI/CD Status
-<p align="center">[![Go Build](https://circleci.com/gh/santtuniskanen/golang-grove.svg?style=shield)](https://app.circleci.com/pipelines/github/santtuniskanen/golang-grove)</p>
+[![Go Build](https://circleci.com/gh/santtuniskanen/golang-grove.svg?style=shield)](https://app.circleci.com/pipelines/github/santtuniskanen/golang-grove)
 <br>
 At this moment, the pipeline only contains a Build check to make sure the application builds properly.
 
