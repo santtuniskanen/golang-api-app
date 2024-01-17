@@ -39,8 +39,8 @@ docker inspect <container_name> | jq -r '.[0].NetworkSettings.Networks."golang-g
 
 ```
 Initialising the database still happens the same way through `migrate.go`, but you have to first edit .env to include the hostname and credentials to connect to the database.
-<br>
-You can also access your database easily by running
+<br><br>
+You can access your database easily by running the docker command below. Alternatively, you can connect to the database with a database management tool like [pgAdmin](https://www.pgadmin.org/), but I personally like to stay in the terminal.
 ```
 docker exec -it <container_name> psql -U <password> -d <database_name>
 ```
