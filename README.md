@@ -30,11 +30,11 @@ Having to install Postgres on all the machines you or I develop on might be a li
 ### Steps
 - Make sure you have Docker and Docker Compose installed.
 - Run the Docker Compose file after doing all the personal edits
-```
+- ```
 docker-compose up -d
 ```
 - Inspect the running container to find the hostname
-```
+- ```
 docker inspect <container_name> | jq -r '.[0].NetworkSettings.Networks."golang-grove_default" | {IP: .IPAddress, Gateway: .Gateway}'
 
 ```
