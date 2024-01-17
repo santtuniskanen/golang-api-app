@@ -23,3 +23,19 @@ The only mandatory variable is `DB_STRING`, which requires these fields:
 ```
 DB_STRING="host=<host> user=<user> password=<password> dbname=<dbname> port=<port> sslmode=require"
 ```
+
+## Local Development with Docker
+Having to install Postgres on all the machines you or I develop on might be a little bit annoying. I decided to instead use Postgres in a Docker container to speed up local development.
+
+### Steps
+- Make sure you have Docker and Docker Compose installed.
+- Run the Docker Compose file after doing all the personal edits
+```
+docker-compose up -d
+```
+- Inspect the running container to find the hostname
+```
+docker inspect <container_name> | jq -r '.[0].NetworkSettings.Networks."golang-grove_default" | {IP: .IPAddress, Gateway: .Gateway}'
+
+```
+Initialising the database still happens the same way through `migrate.go`, but you have to first edit .env to include the hostname and credentials to connect to the database.
